@@ -30,5 +30,18 @@ add_action( 'after_setup_theme', 'ivory_tower_theme_setup', 5 );
  * @return void.
  */
 function ivory_tower_theme_setup() {
-	
+	/* Setup action hooks. */
+	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
+}
+
+/**
+ * Inserts a meta tag into the HEAD to ensure IE is using its latest rendering 
+ * engine. Note that this breaks validation; if this matters to you then a 
+ * child theme could remove this function call.
+ * 
+ * @since  0.1.0
+ * @return void.
+ */
+function ivory_tower_head_meta_IE() {
+	echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">' . "\n";
 }
