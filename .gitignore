@@ -1,0 +1,5 @@
+# Ignore the Compass cache.
+.sass-cache
+
+# Don't commit the compiled stylesheet.
+/style.css
