@@ -30,6 +30,40 @@ add_action( 'after_setup_theme', 'ivory_tower_theme_setup', 5 );
  * @return void.
  */
 function ivory_tower_theme_setup() {
+	/* Configure support for WordPress theme features. */
+	
+	/*  Add post and comment RSS feeds to the <head>. */
+	add_theme_support( 'automatic-feed-links' );
+	
+	/* Allow posts to use all of the post formats. */
+	add_theme_support(
+			'post-formats',
+			array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
+	);
+	
+	/* Use the Semantic Markup feature for HTML5 markup. */
+	add_theme_support(
+			'html5',
+			array( 'search-form', 'comment-form', 'comment-list' )
+	);
+	
+	/* Configure support for Hybrid Core functions and extensions. */
+	
+	/* Activate the advanced image-grabbing functions. */
+	add_theme_support( 'get-the-image' );
+	
+	/* Allow breadcrumb trails to be easily generated in the markup. */
+	add_theme_support( 'breadcrumb-trail' );
+	
+	/* Allow nice pagination for navigating through posts/pages. */
+	add_theme_support( 'loop-pagination' );
+	
+	/* Clean up default inline styles for easier theme control over captions. */
+	add_theme_support( 'cleaner-caption' );
+	
+	/* Clean up output from the gallery shortcode for cleaner markup and styling. */
+	add_theme_support( 'cleaner-gallery' );
+	
 	/* Setup action hooks. */
 	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
 	add_action('wp_enqueue_scripts', 'ivory_tower_enqueue_scripts');
