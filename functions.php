@@ -49,6 +49,9 @@ function ivory_tower_theme_setup() {
 	
 	/* Configure support for Hybrid Core functions and extensions. */
 	
+	/* Enable the custom template hierarchy for some extra override options. */
+	add_theme_support( 'hybrid-core-template-hierarchy' );
+	
 	/* Activate the advanced image-grabbing functions. */
 	add_theme_support( 'get-the-image' );
 	
