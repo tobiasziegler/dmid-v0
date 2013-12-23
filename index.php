@@ -16,12 +16,16 @@
  */
 
 get_header(); ?>
+
 <main <?php hybrid_attr( 'content' ); ?>>
 	<?php if ( have_posts() ) : // Initiate the loop by checking whether posts were found. ?>
 		<?php while ( have_posts() ) : // Loop through the posts. ?>
 			<?php the_post(); // Load the post data. ?>
-		<?php endwhile; ?>
-	<?php endif; ?>
+			<article <?php hybrid_attr( 'post' ); ?>>
+				<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
+			</article>
+		<?php endwhile; // End looping through posts. ?>
+	<?php endif; // End the check for posts. ?>
 </main>
-<?php
-get_footer();
+
+<?php get_footer();
