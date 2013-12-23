@@ -24,7 +24,9 @@ get_header(); ?>
 			</article>
 		<?php endwhile; // End looping through posts. ?>
 	<?php else : // If no post was found. ?>
-		<?php locate_template( array( 'content/error.php' ), true ); // Load the content/error.php template. ?>
+		<article <?php hybrid_attr( 'post' ); ?>>
+			<?php locate_template( array( 'content/error.php' ), true ); // Load the content/error.php template. ?>
+		</article>
 	<?php endif; // End the check for posts. ?>
 </main>
 

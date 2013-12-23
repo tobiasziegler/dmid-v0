@@ -29,7 +29,9 @@ get_header(); ?>
 			<?php loop_pagination(); ?>
 		<?php endif; //End the check for whether loop pagination is required ?>
 	<?php else : // If no posts were found. ?>
-		<?php locate_template( array( 'content/error.php' ), true ); // Load the content/error.php template. ?>
+		<article <?php hybrid_attr( 'post' ); ?>>
+			<?php locate_template( array( 'content/error.php' ), true ); // Load the content/error.php template. ?>
+		</article>
 	<?php endif; // End the check for posts. ?>
 </main>
 

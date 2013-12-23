@@ -12,12 +12,10 @@
  */
 ?>
 
-<article <?php hybrid_attr( 'post' ); ?>>
-	<header class="entry-header">
-		<h1 <?php hybrid_attr( 'entry-title' ); ?>>Nothing found</h1>
-	</header>
-	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<p>Sorry, but the content you were looking for couldn't be found. Maybe try a search?</p>
-		<?php get_search_form(); ?>
-	</div>
-</article>
+<header class="entry-header">
+	<h1 <?php hybrid_attr( 'entry-title' ); ?>>Nothing found</h1>
+</header>
+<div <?php hybrid_attr( 'entry-content' ); ?>>
+	<p>Sorry, but the content you were looking for couldn't be found. Maybe try a search?</p>
+	<?php get_search_form(); ?>
+</div>
