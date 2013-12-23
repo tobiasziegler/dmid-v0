@@ -22,12 +22,14 @@ get_header(); ?>
 		<?php while ( have_posts() ) : // Loop through the posts. ?>
 			<?php the_post(); // Load the post data. ?>
 			<article <?php hybrid_attr( 'post' ); ?>>
-				<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
+				<?php hybrid_get_content_template(); // Load the content/*.php template. ?>
 			</article>
 		<?php endwhile; // End looping through posts. ?>
 		<?php if ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results, paginate the loop. ?>
 			<?php loop_pagination(); ?>
 		<?php endif; //End the check for whether loop pagination is required ?>
+	<?php else : // If no posts were found. ?>
+		<?php locate_template( array( 'content/error.php' ), true ); // Load the content/error.php template. ?>
 	<?php endif; // End the check for posts. ?>
 </main>
 

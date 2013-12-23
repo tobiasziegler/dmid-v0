@@ -19,10 +19,12 @@ get_header(); ?>
 		<?php while ( have_posts() ) : // Loop through the posts. ?>
 			<?php the_post(); // Load the post data. ?>
 			<article <?php hybrid_attr( 'post' ); ?>>
-				<?php hybrid_get_content_template(); // Loads the content/*.php template. ?>
+				<?php hybrid_get_content_template(); // Load the content/*.php template. ?>
 				<?php comments_template(); ?>
 			</article>
 		<?php endwhile; // End looping through posts. ?>
+	<?php else : // If no post was found. ?>
+		<?php locate_template( array( 'content/error.php' ), true ); // Load the content/error.php template. ?>
 	<?php endif; // End the check for posts. ?>
 </main>
 
