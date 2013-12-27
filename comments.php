@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Ivory Tower's comments template file.
  *
