@@ -23,4 +23,5 @@
 		<header <?php hybrid_attr( 'header' ); ?>>
 			<?php hybrid_site_title(); ?>
 			<?php hybrid_site_description(); ?>
+			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 		</header>
