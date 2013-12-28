@@ -12,7 +12,16 @@
  */
 ?>
 
-<?php wp_footer(); ?>
+	<footer <?php hybrid_attr( 'footer' ); ?>>
+		<p class="site-credits">
+			<?php printf(
+					__( 'Powered by %1$s and %2$s.', 'ivory-tower' ),
+					hybrid_get_wp_link(),
+					hybrid_get_theme_link()
+					); ?>
+		</p>
+	</footer>
 
+	<?php wp_footer(); ?>
 </body>
 </html>
