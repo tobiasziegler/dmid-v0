@@ -47,6 +47,5 @@
 <?php endif; // End the check for whether to display the full content. ?>
 
 <footer class="entry-meta">
-	<?php hybrid_post_format_link(); ?>
 	<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'items_wrap' => '<ul %s><li>%s</li></ul>', 'sep' => '</li><li>' ) ); ?>
 </footer>
