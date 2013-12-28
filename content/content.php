@@ -26,7 +26,10 @@
 	<?php edit_post_link(); ?>
 </header>
 
-<?php if ( has_excerpt() ) : // If the post has a hand-crafted excerpt, display it. ?>
+<?php if (
+		( !is_singular( get_post_type() ) ) // If this is not a singular post
+		|| ( has_excerpt() )                // or if the post has a manual excerpt
+		) :                                 // display the excerpt. ?>
 
 <div <?php hybrid_attr( 'entry-summary' ); ?>>
 	<?php the_excerpt(); ?>
@@ -34,7 +37,7 @@
 
 <?php endif; // End the check for whether to display the excerpt. ?>
 
-<?php if ( is_singular( get_post_type() ) || !has_excerpt() ) : // If viewing a single post or if no hand-crafted excerpt exists, display the content. ?>
+<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post, display the content. ?>
 
 <div <?php hybrid_attr( 'entry-content' ); ?>>
 	<?php the_content(); ?>
