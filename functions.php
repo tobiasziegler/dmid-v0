@@ -72,6 +72,9 @@ function ivory_tower_theme_setup() {
 	add_action( 'widgets_init', 'ivory_tower_register_sidebar', 5 );
 	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
 	add_action('wp_enqueue_scripts', 'ivory_tower_enqueue_scripts');
+	
+	/* Setup filter hooks. */
+	add_filter( 'hybrid_site_description', 'ivory_tower_site_description' );
 }
 
 /**
@@ -122,4 +125,22 @@ function ivory_tower_enqueue_scripts() {
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.7.0.min.js', false, '2.7.0', false );
 	
 	wp_enqueue_script( 'modernizr' );
+}
+
+/**
+ * Wraps the site description in a paragraph element instead of a heading,
+ * consistent with the HTML5 spec.
+ * 
+ * @since  0.1.0
+ * @link   http://html5doctor.com/howto-subheadings/
+ * @param  string $orig The original heading-wrapped description.
+ * @return string The paragraph-wrapped description.
+ */
+function ivory_tower_site_description( $orig ) {
+	
+	if ( $desc = get_bloginfo( 'description' ) ) {
+		$desc = sprintf( '<p %s>%s</p>', hybrid_get_attr( 'site-description' ), $desc );
+	}
+	
+	return $desc;
 }
