@@ -81,7 +81,7 @@ function ivory_tower_theme_setup() {
  * @return void.
  */
 function ivory_tower_register_menu() {
-	register_nav_menu( 'primary', 'Primary' );
+	register_nav_menu( 'primary', _x( 'Primary', 'nav menu location', 'ivory-tower' ) );
 }
 
 /**
@@ -94,8 +94,8 @@ function ivory_tower_register_sidebar() {
 	hybrid_register_sidebar(
 			array(
 				'id'          => 'primary',
-				'name'        => 'Primary',
-				'description' => 'The primary sidebar comes after the main content of each page in the markup and should be used for content related to the site as a whole.'
+				'name'        => _x( 'Primary', 'sidebar', 'ivory-tower' ),
+				'description' => __( 'The primary sidebar comes after the main content on each page in the markup and should be used for content related to the site as a whole.', 'ivory-tower' )
 				)
 			);
 }

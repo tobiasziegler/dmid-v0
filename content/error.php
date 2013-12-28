@@ -13,9 +13,9 @@
 ?>
 
 <header class="entry-header">
-	<h1 <?php hybrid_attr( 'entry-title' ); ?>>Nothing found</h1>
+	<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php _e( 'Nothing found', 'ivory-tower' ); ?></h1>
 </header>
 <div <?php hybrid_attr( 'entry-content' ); ?>>
-	<p>Sorry, but the content you were looking for couldn't be found. Maybe try a search?</p>
+	<p><?php _e( 'Sorry, but the content you were looking for couldn&rsquo;t be found. Maybe try a search?', 'ivory-tower' ); ?></p>
 	<?php get_search_form(); ?>
 </div>
