@@ -69,6 +69,7 @@ function ivory_tower_theme_setup() {
 	
 	/* Setup action hooks. */
 	add_action( 'init', 'ivory_tower_register_menu', 5 );
+	add_action( 'widgets_init', 'ivory_tower_register_sidebar', 5 );
 	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
 	add_action('wp_enqueue_scripts', 'ivory_tower_enqueue_scripts');
 }
@@ -81,6 +82,22 @@ function ivory_tower_theme_setup() {
  */
 function ivory_tower_register_menu() {
 	register_nav_menu( 'primary', 'Primary' );
+}
+
+/**
+ * Registers the widget-ready sidebar for the theme.
+ * 
+ * @since  0.1.0
+ * @return void.
+ */
+function ivory_tower_register_sidebar() {
+	hybrid_register_sidebar(
+			array(
+				'id'          => 'primary',
+				'name'        => 'Primary',
+				'description' => 'The primary sidebar comes after the main content of each page in the markup and should be used for content related to the site as a whole.'
+				)
+			);
 }
 
 /**

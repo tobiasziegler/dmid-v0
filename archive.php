@@ -32,4 +32,5 @@ get_header(); ?>
 	<?php endif; // End the check for posts. ?>
 </main>
 
+<?php hybrid_get_sidebar( 'primary' ); // Load the sidebar/primary.php template. ?>
 <?php get_footer();
