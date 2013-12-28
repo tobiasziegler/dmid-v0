@@ -2,8 +2,8 @@
 /**
  * Ivory Tower's primary menu template.
  *
- * This is the template for the primary menu. If menu items have been allocated
- * to the primary menu.
+ * This is the template for the primary menu. It will be displayed if menu items
+ * have been allocated to the primary menu.
  *
  * @since 0.1.0
  * 
