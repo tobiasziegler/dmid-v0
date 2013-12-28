@@ -44,7 +44,7 @@
 	<?php wp_link_pages(); ?>
 </div>
 
-<?php endif; // End the check on whether the full content should be displayed. ?>
+<?php endif; // End the check for whether to display the full content. ?>
 
 <footer class="entry-meta">
 	<?php hybrid_post_format_link(); ?>
