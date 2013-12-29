@@ -49,6 +49,12 @@ function ivory_tower_theme_setup() {
 	
 	/* Configure support for Hybrid Core functions and extensions. */
 	
+	/* Load the theme's stylesheet. */
+	add_theme_support(
+			'hybrid-core-styles',
+			array( 'style' )
+	);
+	
 	/* Enable the custom template hierarchy for some extra override options. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 	
