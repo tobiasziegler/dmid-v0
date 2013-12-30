@@ -5,3 +5,35 @@
  * for the site content. Any partials to be imported within this file should be
  * placed in a `modules` subdirectory.
  */
+
+/**
+ * Entry styling
+ */
+
+.entry-author:before,
+.entry-published:before,
+.entry-terms.category:before,
+.entry-terms.post_tag:before,
+.comments-link:before {
+	@include genericon-base();
+}
+
+.entry-author:before {
+	@include genericon-user();
+}
+
+.entry-published:before {
+	@include genericon-month();
+}
+
+.entry-terms.category:before {
+	@include genericon-category;
+}
+
+.entry-terms.post_tag:before {
+	@include genericon-tag;
+}
+
+.comments-link:before {
+	@include genericon-comment;
+}
