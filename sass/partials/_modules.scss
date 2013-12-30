@@ -10,6 +10,29 @@
  * Entry styling
  */
 
+.entry-author,
+.entry-published,
+.entry-terms.category,
+.comments-link {
+	display: inline;
+}
+
+ul.entry-terms {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.entry-terms > li {
+	display: inline-block;
+	margin-right: 8px; // IE8 fallback.
+	margin-right: 0.5rem;
+}
+
+ul.entry-terms > li:last-of-type {
+	margin-right: 0;
+}
+
 .entry-author:before,
 .entry-published:before,
 .entry-terms.category:before,
