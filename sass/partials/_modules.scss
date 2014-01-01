@@ -54,6 +54,10 @@
  * Entry styling
  */
 
+.entry {
+	@include rem-fallback( margin-bottom, 1.5 );
+}
+
 .entry-header,
 .entry-meta {
 	color: $color-contrast;
@@ -136,4 +140,21 @@ ul.entry-terms > li:first-child {
 
 .more-link:hover {
 	text-decoration: underline;
+}
+
+/**
+ * Sidebar and widget styling.
+ */
+
+.widget {
+	@include rem-fallback( width, 12.5 );
+	float: left;
+}
+
+/**
+ * Site credits.
+ */
+
+.site-credits {
+	text-align: right;
 }

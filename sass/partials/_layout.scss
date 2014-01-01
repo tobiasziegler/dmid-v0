@@ -6,3 +6,12 @@
  * areas and the footer. Any partials to be imported within this file should be
  * placed in a `layout` subdirectory.
  */
+
+#sidebar-primary {
+	border-top: 1px solid $color-text;
+}
+
+#footer {
+	clear: left;
+	border-top: 1px solid $color-text;
+}
