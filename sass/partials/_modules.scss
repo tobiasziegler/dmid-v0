@@ -19,6 +19,10 @@
 	margin: 0;
 }
 
+#site-title a {
+	color: $color-text;
+}
+
 #site-description {
 	@include rem-fallback( font-size, 2 );
 	font-style: italic;
@@ -38,6 +42,10 @@
 	display: inline;
 }
 
+.menu-item a {
+	color: $color-contrast;
+}
+
 .sub-menu {
 	display: none;
 }
@@ -46,11 +54,36 @@
  * Entry styling
  */
 
+.entry-header,
+.entry-meta {
+	color: $color-contrast;
+}
+
+.entry-header a,
+.entry-meta a {
+	color: $color-contrast;
+}
+
+.entry-title {
+	color: $color-text;
+	@include rem-fallback( font-size, 1.5 );
+	@include rem-fallback( margin-top, 1.5 ); 
+	margin-bottom: 0;
+}
+
+.entry-title a {
+	color: $color-text;
+}
+
 .entry-author,
 .entry-published,
 .entry-terms.category,
 .comments-link {
 	display: inline;
+}
+
+.entry-author {
+	font-style: normal;
 }
 
 ul.entry-terms {
@@ -94,4 +127,13 @@ ul.entry-terms > li:first-child {
 
 .comments-link:before {
 	@include genericon-comment;
+}
+
+.more-link {
+	color: $color-text;
+	text-decoration: none;
+}
+
+.more-link:hover {
+	text-decoration: underline;
 }
