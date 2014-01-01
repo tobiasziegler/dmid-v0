@@ -8,5 +8,14 @@
  */
 
 @import "abstractions/_fonts";
+@import "abstractions/_mixins";
+
+/**
+ * Base variables.
+ */
+
+$body-background-color: #fff;
+$body-max-width-px: 800px;
+$body-max-width-rem: 50rem;
 
 $font-family-text: Georgia,Times,"Times New Roman",serif;
