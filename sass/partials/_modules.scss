@@ -1,0 +1,160 @@
+/**
+ * Ivory Tower partial for module-level styles
+ *
+ * This file is used to style the modular components that provide the structure
+ * for the site content. Any partials to be imported within this file should be
+ * placed in a `modules` subdirectory.
+ */
+
+/**
+ * Site header region
+ */
+
+#header {
+	text-align: center;
+}
+
+#site-title {
+	@include rem-fallback( font-size, 2 );
+	margin: 0;
+}
+
+#site-title a {
+	color: $color-text;
+}
+
+#site-description {
+	@include rem-fallback( font-size, 2 );
+	font-style: italic;
+	margin: 0;
+}
+
+/**
+ * Menu
+ */
+
+.menu {
+	list-style: none;
+	margin: 0;
+}
+
+.menu-item {
+	display: inline;
+}
+
+.menu-item a {
+	color: $color-contrast;
+}
+
+.sub-menu {
+	display: none;
+}
+
+/**
+ * Entry styling
+ */
+
+.entry {
+	@include rem-fallback( margin, 3, 0 );
+}
+
+.entry-header,
+.entry-meta {
+	color: $color-contrast;
+}
+
+.entry-header a,
+.entry-meta a {
+	color: $color-contrast;
+}
+
+.entry-title {
+	color: $color-text;
+	@include rem-fallback( font-size, 1.5 );
+	@include rem-fallback( margin-top, 1.5 ); 
+	margin-bottom: 0;
+}
+
+.entry-title a {
+	color: $color-text;
+}
+
+.entry-author,
+.entry-published,
+.entry-terms.category,
+.comments-link {
+	display: inline;
+}
+
+.entry-author {
+	font-style: normal;
+}
+
+ul.entry-terms {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.entry-terms > li {
+	display: inline;
+	@include rem-fallback( margin-left, 0.5 );
+}
+
+ul.entry-terms > li:first-child {
+	margin-left: 0;
+}
+
+.entry-author:before,
+.entry-published:before,
+.entry-terms.category:before,
+.entry-terms.post_tag:before,
+.comments-link:before {
+	@include genericon-base();
+}
+
+.entry-author:before {
+	@include genericon-user();
+}
+
+.entry-published:before {
+	@include genericon-month();
+}
+
+.entry-terms.category:before {
+	@include genericon-category;
+}
+
+.entry-terms.post_tag:before {
+	@include genericon-tag;
+}
+
+.comments-link:before {
+	@include genericon-comment;
+}
+
+.more-link {
+	color: $color-text;
+	text-decoration: none;
+}
+
+.more-link:hover {
+	text-decoration: underline;
+}
+
+/**
+ * Sidebar and widget styling.
+ */
+
+.widget {
+	@include rem-fallback( width, 12.5 );
+	float: left;
+}
+
+/**
+ * Site credits.
+ */
+
+.site-credits {
+	text-align: right;
+}

@@ -1,0 +1,49 @@
+/**
+ * Genericons icon font.
+ */
+@font-face {
+	font-family: 'Genericons';
+	src: url('fonts/genericons/genericons-regular-webfont.eot');
+	src: url('fonts/genericons/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/genericons/genericons-regular-webfont.woff') format('woff'),
+		 url('fonts/genericons/genericons-regular-webfont.ttf') format('truetype'),
+		 url('fonts/genericons/genericons-regular-webfont.svg#genericonsregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/**
+ * Genericon base style mixin.
+ *
+ * This mixin declares the base features of all Genericons. Attach to the
+ * :before pseudo-element, ideally for all elements requiring a Genericon in a
+ * single declaration.
+ */
+@mixin genericon-base() {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align: top;
+}
+
+/**
+ * Genericon content mixins.
+ *
+ * These mixins are called using the name of the required icon and output
+ * the corresponding content attribute.
+ */
+@mixin genericon-comment() {
+	content: '\f300';
+}
+@mixin genericon-category() {
+	content: '\f301';
+}
+@mixin genericon-tag() {
+	content: '\f302';
+}
+@mixin genericon-user() {
+	content: '\f304';
+}
+@mixin genericon-month() {
+	content: '\f307';
+}

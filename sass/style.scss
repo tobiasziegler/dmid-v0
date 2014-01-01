@@ -4,9 +4,14 @@ Theme URI: https://github.com/tobiasziegler/ivory-tower
 Author: David Mallard
 Author URI: http://davidmallard.id.au/
 Description: A clean, modern WordPress theme designed for academics and professionals who like to internet.
-Version: 0.1.0-alpha
+Version: 0.1.0
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: ivory-tower
 */
+
+@import "partials/_abstractions";
+@import "partials/_base";
+@import "partials/_layout";
+@import "partials/_modules";
