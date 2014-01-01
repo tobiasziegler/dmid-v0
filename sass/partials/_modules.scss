@@ -7,6 +7,42 @@
  */
 
 /**
+ * Site header region
+ */
+
+#header {
+	text-align: center;
+}
+
+#site-title {
+	@include rem-fallback( font-size, 2 );
+	margin: 0;
+}
+
+#site-description {
+	@include rem-fallback( font-size, 2 );
+	font-style: italic;
+	margin: 0;
+}
+
+/**
+ * Menu
+ */
+
+.menu {
+	list-style: none;
+	margin: 0;
+}
+
+.menu-item {
+	display: inline;
+}
+
+.sub-menu {
+	display: none;
+}
+
+/**
  * Entry styling
  */
 
