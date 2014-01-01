@@ -8,3 +8,9 @@
  */
 
 @import "base/_normalize";
+
+body {
+	background-color: $body-background-color;
+	@include rem-fallback( max-width, $body-max-width );
+	margin: auto;
+}
