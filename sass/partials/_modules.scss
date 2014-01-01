@@ -55,7 +55,7 @@
  */
 
 .entry {
-	@include rem-fallback( margin-bottom, 1.5 );
+	@include rem-fallback( margin, 3, 0 );
 }
 
 .entry-header,
