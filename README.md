@@ -6,6 +6,11 @@ Or it will be. This theme is a work in progress, with all features subject to ch
 
 ## Changelog
 
-### 0.1
+### 0.2.0-alpha
+
+* Added templates to display attachments, including images.
+* Large images and embedded objects should be scaled to stay within their container on the page.
+
+### 0.1.0
 
 * Just ship it. It's rough but it can be deployed. Let's make it better.
