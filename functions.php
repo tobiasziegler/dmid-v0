@@ -81,6 +81,9 @@ function ivory_tower_theme_setup() {
 	
 	/* Setup filter hooks. */
 	add_filter( 'hybrid_site_description', 'ivory_tower_site_description' );
+	
+	/* Handle content width for embeds and images. */
+	hybrid_set_content_width( 800 );
 }
 
 /**
