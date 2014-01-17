@@ -132,8 +132,11 @@ function ivory_tower_head_meta_IE() {
  */
 function ivory_tower_enqueue_scripts() {
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.7.0.min.js', false, '2.7.0', false );
+	wp_register_script( 'fitvids', get_template_directory_uri() . '/js/vendor/jquery.fitvids.js', array( 'jquery' ), '1.0.3', true );
+	wp_register_script( 'ivory-tower', get_template_directory_uri() . '/js/ivory-tower.js', array( 'fitvids' ), NULL, true );
 	
 	wp_enqueue_script( 'modernizr' );
+	wp_enqueue_script( 'ivory-tower' );
 }
 
 /**
