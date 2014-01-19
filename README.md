@@ -8,8 +8,9 @@ Or it will be. This theme is a work in progress, with all features subject to ch
 
 ### 0.2.0-alpha
 
+* Custom templates for all the post formats.
 * Added templates to display attachments, including images.
-* Large images and embedded objects should be scaled to stay within their container on the page.
+* Fluid images and embedded objects, including FitVids.js to resize videos from YouTube, Vimeo, etc.
 
 ### 0.1.0
 
