@@ -28,8 +28,10 @@ img,
 embed,
 iframe,
 object,
+audio,
 video {
 	max-width: 100%;
+	height: auto;
 }
 
 img[class*="align"],
