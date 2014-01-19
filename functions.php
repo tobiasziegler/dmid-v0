@@ -74,6 +74,7 @@ function ivory_tower_theme_setup() {
 	add_theme_support( 'cleaner-gallery' );
 	
 	/* Setup action hooks. */
+	add_action( 'init', 'ivory_tower_register_image_sizes', 5 );
 	add_action( 'init', 'ivory_tower_register_menu', 5 );
 	add_action( 'widgets_init', 'ivory_tower_register_sidebar', 5 );
 	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
@@ -84,6 +85,16 @@ function ivory_tower_theme_setup() {
 	
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 800 );
+}
+
+/**
+ * Registers custom image sizes for the theme.
+ * 
+ * @since 0.2.0
+ * @return void.
+ */
+function ivory_tower_register_image_sizes() {
+	add_image_size( 'ivory-tower-max', 1600 );
 }
 
 /**
