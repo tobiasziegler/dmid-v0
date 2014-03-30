@@ -110,15 +110,15 @@ ul.entry-terms > li:first-child {
 .entry-terms.category:before,
 .entry-terms.post_tag:before,
 .comments-link:before {
-	@include genericon-base();
+	@include genericon-base;
 }
 
 .entry-author:before {
-	@include genericon-user();
+	@include genericon-user;
 }
 
 .entry-published:before {
-	@include genericon-month();
+	@include genericon-month;
 }
 
 .entry-terms.category:before {
