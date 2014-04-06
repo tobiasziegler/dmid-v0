@@ -142,6 +142,11 @@ ul.entry-terms > li:first-child {
 	text-decoration: underline;
 }
 
+.format-status .avatar {
+	float: left;
+	@include rem-fallback( margin-right, 1 );
+}
+
 /**
  * Sidebar and widget styling.
  */
