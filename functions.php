@@ -78,7 +78,7 @@ function ivory_tower_theme_setup() {
 	add_action( 'init', 'ivory_tower_register_menu', 5 );
 	add_action( 'widgets_init', 'ivory_tower_register_sidebar', 5 );
 	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
-	add_action('wp_enqueue_scripts', 'ivory_tower_enqueue_scripts');
+	add_action( 'wp_enqueue_scripts', 'ivory_tower_enqueue_scripts' );
 	
 	/* Setup filter hooks. */
 	add_filter( 'hybrid_site_description', 'ivory_tower_site_description' );
