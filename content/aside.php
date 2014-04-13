@@ -33,7 +33,7 @@
 	<?php the_excerpt(); ?>
 </div>
 
-<?php else : // If viewing a single aside. ?>
+<?php else : // If viewing a single aside or if there isn't a manual excerpt. ?>
 
 <div <?php hybrid_attr( 'entry-content' ); ?>>
 	<?php the_content(); ?>
