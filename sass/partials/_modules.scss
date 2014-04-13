@@ -142,6 +142,15 @@ ul.entry-terms > li:first-child {
 	text-decoration: underline;
 }
 
+/**
+ * Post format styling.
+ */
+
+.format-standard .entry-summary img {
+	float: right;
+	@include rem-fallback( margin-left, 1 );
+}
+
 .format-status .avatar {
 	float: left;
 	@include rem-fallback( margin-right, 1 );
