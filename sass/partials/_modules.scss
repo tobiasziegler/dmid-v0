@@ -143,6 +143,15 @@ ul.entry-terms > li:first-child {
 }
 
 /**
+ * Styling specifically for singular posts and pages.
+ */
+
+.singular .entry-summary {
+	@include rem-fallback( margin-left, 2 );
+	@include rem-fallback( margin-right, 2 );
+}
+
+/**
  * Post format styling.
  */
 
