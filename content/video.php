@@ -24,22 +24,23 @@
 	<?php edit_post_link(); ?>
 </header>
 
-<?php echo ( $video = hybrid_media_grabber( array( 'type' => 'video', 'split_media' => true ) ) ); ?>
-
-<?php if (
-		( !is_singular( get_post_type() ) ) // If this is not a singular post
-		&&	( ( has_excerpt() )             // and if the post has a manual excerpt
-			|| ( empty( $video ) )			// or (edge case) there is no video
-			)
-		) :                                 // display the excerpt. ?>
+<?php if ( ( !is_singular( get_post_type() ) ) ) : // If this is not a singular post, grab the media plus excerpt. ?>
 
 <div <?php hybrid_attr( 'entry-summary' ); ?>>
+	
+	<?php echo ( $video = hybrid_media_grabber( array( 'type' => 'video', 'split_media' => true ) ) ); ?>
+
+	<?php if ( ( has_excerpt() )	// If the post has a manual excerpt
+			|| ( empty( $video ) )	// or (edge case) there is no video
+			) :							// display the excerpt. ?>
+
 	<?php the_excerpt(); ?>
+	
+	<?php endif; // End the check for whether to display the excerpt. ?>
+	
 </div>
 
-<?php endif; // End the check for whether to display the excerpt. ?>
-
-<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post, display the content. ?>
+<?php else : // If viewing a single post, display the content. ?>
 
 <div <?php hybrid_attr( 'entry-content' ); ?>>
 	<?php the_content(); ?>

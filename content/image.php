@@ -24,11 +24,10 @@
 	<?php edit_post_link(); ?>
 </header>
 
-<?php get_the_image( array( 'size' => 'ivory-tower-max', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'scan_raw', 'scan', 'featured', 'attachment' ) ) ); ?>
-
 <?php if ( ( !is_singular( get_post_type() ) ) ) : // If this is not a singular post, display the excerpt. ?>
 
 <div <?php hybrid_attr( 'entry-summary' ); ?>>
+	<?php get_the_image( array( 'size' => 'ivory-tower-max', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'scan_raw', 'scan', 'featured', 'attachment' ) ) ); ?>
 	<?php the_excerpt(); ?>
 </div>
 
