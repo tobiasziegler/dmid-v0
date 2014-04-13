@@ -170,7 +170,7 @@ ul.entry-terms > li:first-child {
  */
 
 .widget {
-	@include rem-fallback( width, 12.5 );
+	@include rem-fallback( width, 20 );
 	float: left;
 }
 
