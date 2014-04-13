@@ -44,9 +44,8 @@
 
 <?php else : // If this is not a singular post. ?>
 
-<?php get_the_image( array( 'size' => 'thumbnail', 'order' => array( 'featured', 'attachment' ) ) ); ?>
-
 <div <?php hybrid_attr( 'entry-summary' ); ?>>
+	<?php get_the_image( array( 'size' => 'thumbnail', 'order' => array( 'featured', 'attachment' ) ) ); ?>
 	<?php the_excerpt(); ?>
 </div>
 
