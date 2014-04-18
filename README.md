@@ -6,12 +6,12 @@ Or it will be. This theme is a work in progress, with all features subject to ch
 
 ## Changelog
 
-### 0.2.0-alpha
+### 0.2.0
 
-* Custom templates for all the post formats.
-* Added templates to display attachments, including images.
-* Fluid images and embedded objects, including FitVids.js to resize videos from YouTube, Vimeo, etc.
+* Created custom templates for all the WordPress post formats, along with templates to display attachments, including images.
+* Introduced support for fluid images and embedded objects, including FitVids.js to resize videos from YouTube, Vimeo, etc.
+* Updated third-party libraries and assets - Modernizr to 2.7.2 and Genericons to 3.0.3.
 
 ### 0.1.0
 
-* Just ship it. It's rough but it can be deployed. Let's make it better.
+* Just shipped it. It's rough but it can be deployed. Let's make it better.
