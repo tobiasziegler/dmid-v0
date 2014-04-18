@@ -110,15 +110,15 @@ ul.entry-terms > li:first-child {
 .entry-terms.category:before,
 .entry-terms.post_tag:before,
 .comments-link:before {
-	@include genericon-base();
+	@include genericon-base;
 }
 
 .entry-author:before {
-	@include genericon-user();
+	@include genericon-user;
 }
 
 .entry-published:before {
-	@include genericon-month();
+	@include genericon-month;
 }
 
 .entry-terms.category:before {
@@ -142,12 +142,39 @@ ul.entry-terms > li:first-child {
 	text-decoration: underline;
 }
 
+.entry-meta {
+	clear: both;
+}
+
+/**
+ * Styling specifically for singular posts and pages.
+ */
+
+.singular .entry-summary {
+	@include rem-fallback( margin-left, 2 );
+	@include rem-fallback( margin-right, 2 );
+}
+
+/**
+ * Post format styling.
+ */
+
+.format-standard .entry-summary img {
+	float: right;
+	@include rem-fallback( margin-left, 1 );
+}
+
+.format-status .avatar {
+	float: left;
+	@include rem-fallback( margin-right, 1 );
+}
+
 /**
  * Sidebar and widget styling.
  */
 
 .widget {
-	@include rem-fallback( width, 12.5 );
+	@include rem-fallback( width, 20 );
 	float: left;
 }
 

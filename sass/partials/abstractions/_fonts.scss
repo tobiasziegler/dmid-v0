@@ -19,11 +19,12 @@
  * :before pseudo-element, ideally for all elements requiring a Genericon in a
  * single declaration.
  */
-@mixin genericon-base() {
+@mixin genericon-base {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1 'Genericons';
-	vertical-align: top;
+	text-decoration: inherit;
+	vertical-align: text-bottom;
 }
 
 /**
@@ -32,18 +33,18 @@
  * These mixins are called using the name of the required icon and output
  * the corresponding content attribute.
  */
-@mixin genericon-comment() {
+@mixin genericon-comment {
 	content: '\f300';
 }
-@mixin genericon-category() {
+@mixin genericon-category {
 	content: '\f301';
 }
-@mixin genericon-tag() {
+@mixin genericon-tag {
 	content: '\f302';
 }
-@mixin genericon-user() {
+@mixin genericon-user {
 	content: '\f304';
 }
-@mixin genericon-month() {
+@mixin genericon-month {
 	content: '\f307';
 }

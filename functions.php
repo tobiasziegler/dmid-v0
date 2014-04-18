@@ -74,13 +74,27 @@ function ivory_tower_theme_setup() {
 	add_theme_support( 'cleaner-gallery' );
 	
 	/* Setup action hooks. */
+	add_action( 'init', 'ivory_tower_register_image_sizes', 5 );
 	add_action( 'init', 'ivory_tower_register_menu', 5 );
 	add_action( 'widgets_init', 'ivory_tower_register_sidebar', 5 );
 	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
-	add_action('wp_enqueue_scripts', 'ivory_tower_enqueue_scripts');
+	add_action( 'wp_enqueue_scripts', 'ivory_tower_enqueue_scripts' );
 	
 	/* Setup filter hooks. */
 	add_filter( 'hybrid_site_description', 'ivory_tower_site_description' );
+	
+	/* Handle content width for embeds and images. */
+	hybrid_set_content_width( 800 );
+}
+
+/**
+ * Registers custom image sizes for the theme.
+ * 
+ * @since 0.2.0
+ * @return void.
+ */
+function ivory_tower_register_image_sizes() {
+	add_image_size( 'ivory-tower-max', 1600 );
 }
 
 /**
@@ -128,9 +142,12 @@ function ivory_tower_head_meta_IE() {
  * @return void.
  */
 function ivory_tower_enqueue_scripts() {
-	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.7.0.min.js', false, '2.7.0', false );
+	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.7.2.min.js', false, '2.7.2', false );
+	wp_register_script( 'fitvids', get_template_directory_uri() . '/js/vendor/jquery.fitvids.js', array( 'jquery' ), '1.1.0', true );
+	wp_register_script( 'ivory-tower', get_template_directory_uri() . '/js/ivory-tower.js', array( 'fitvids' ), NULL, true );
 	
 	wp_enqueue_script( 'modernizr' );
+	wp_enqueue_script( 'ivory-tower' );
 }
 
 /**
