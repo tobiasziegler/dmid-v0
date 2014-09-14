@@ -50,6 +50,63 @@
 	display: none;
 }
 
+#menu-social li a[href*="wordpress.org"]::before,
+#menu-social li a[href*="wordpress.com"]::before {
+	@include genericon-wordpress;
+}
+
+#menu-social li a[href*="facebook.com"]::before {
+	@include genericon-facebook;
+}
+
+#menu-social li a[href*="twitter.com"]::before {
+	@include genericon-twitter;
+}
+
+#menu-social li a[href*="dribbble.com"]::before {
+	@include genericon-dribbble;
+}
+
+#menu-social li a[href*="plus.google.com"]::before {
+	@include genericon-googleplus;
+}
+
+#menu-social li a[href*="pinterest.com"]::before {
+	@include genericon-pinterest;
+}
+
+#menu-social li a[href*="github.com"]::before {
+	@include genericon-github;
+}
+
+#menu-social li a[href*="tumblr.com"]::before {
+	@include genericon-tumblr;
+}
+
+#menu-social li a[href*="youtube.com"]::before {
+	@include genericon-youtube;
+}
+
+#menu-social li a[href*="flickr.com"]::before {
+	@include genericon-flickr;
+}
+
+#menu-social li a[href*="vimeo.com"]::before {
+	@include genericon-vimeo;
+}
+
+#menu-social li a[href*="instagram.com"]::before {
+	@include genericon-instagram;
+}
+
+#menu-social li a[href*="codepen.io"]::before {
+	@include genericon-codepen;
+}
+
+#menu-social li a[href*="linkedin.com"]::before {
+	@include genericon-linkedin;
+}
+
 /**
  * Entry styling
  */
