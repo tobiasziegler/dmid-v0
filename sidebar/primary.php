@@ -11,8 +11,9 @@
  * @subpackage Templates
  */
 
-if ( is_active_sidebar( 'primary' ) ) : // Check whether the sidebar has any widgets assigned. ?>
+if ( is_active_sidebar( 'primary' ) || has_nav_menu( 'social' ) ) : // Check whether the sidebar has any widgets assigned or there is a social menu assigned. ?>
 	<aside <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
-		<?php dynamic_sidebar( 'primary' ); // Display the primary sidebar. ?>
+		<?php hybrid_get_menu( 'social' ); // Loads the menu/social.php template. ?>
+		<?php dynamic_sidebar( 'primary' ); // Display the primary sidebar widgets. ?>
 	</aside>
 <?php endif; // End the check for whether the sidebar has widgets assigned.
