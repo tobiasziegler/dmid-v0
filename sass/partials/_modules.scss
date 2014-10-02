@@ -51,6 +51,24 @@
 }
 
 #menu-social li a[href*="wordpress.org"]::before,
+#menu-social li a[href*="wordpress.com"]::before,
+#menu-social li a[href*="facebook.com"]::before,
+#menu-social li a[href*="twitter.com"]::before,
+#menu-social li a[href*="dribbble.com"]::before,
+#menu-social li a[href*="plus.google.com"]::before,
+#menu-social li a[href*="pinterest.com"]::before,
+#menu-social li a[href*="github.com"]::before,
+#menu-social li a[href*="tumblr.com"]::before,
+#menu-social li a[href*="youtube.com"]::before,
+#menu-social li a[href*="flickr.com"]::before,
+#menu-social li a[href*="vimeo.com"]::before,
+#menu-social li a[href*="instagram.com"]::before,
+#menu-social li a[href*="codepen.io"]::before,
+#menu-social li a[href*="linkedin.com"]::before {
+	@include genericon-base;
+}
+
+#menu-social li a[href*="wordpress.org"]::before,
 #menu-social li a[href*="wordpress.com"]::before {
 	@include genericon-wordpress;
 }
