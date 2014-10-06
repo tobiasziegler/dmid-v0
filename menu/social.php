@@ -12,7 +12,8 @@
  */
 
 if ( has_nav_menu( 'social' ) ) : // Check if there's a social menu assigned. ?>
-	<nav <?php hybrid_attr( 'menu', 'social' ); ?>>
+	<section <?php hybrid_attr( 'menu', 'social' ); ?>>
+		<h3 class="widget-title"><?php echo esc_html( get_term( get_nav_menu_locations()['social'], 'nav_menu' )->name ); ?></h3>
 		<?php wp_nav_menu(
 				array(
 					'theme_location'  => 'social',
@@ -24,5 +25,5 @@ if ( has_nav_menu( 'social' ) ) : // Check if there's a social menu assigned. ?>
 					'items_wrap'      => '<ul id="%s" class="%s">%s</ul>'
 					)
 				); ?>
-	</nav>
+	</section>
 <?php endif; // End the check for a primary menu. ?>
