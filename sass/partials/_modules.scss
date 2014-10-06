@@ -50,6 +50,10 @@
 	display: none;
 }
 
+#menu-social .menu-item {
+	display: block;
+}
+
 #menu-social li a[href*="wordpress.org"]::before,
 #menu-social li a[href*="wordpress.com"]::before,
 #menu-social li a[href*="facebook.com"]::before,
@@ -248,7 +252,8 @@ ul.entry-terms > li:first-child {
  * Sidebar and widget styling.
  */
 
-.widget {
+.widget,
+#menu-social {
 	@include rem-fallback( width, 20 );
 	float: left;
 }
