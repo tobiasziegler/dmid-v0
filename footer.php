@@ -12,6 +12,7 @@
  */
 ?>
 
+	<?php hybrid_get_sidebar( 'primary' ); // Load the sidebar/primary.php template. ?>
 	<footer <?php hybrid_attr( 'footer' ); ?>>
 		<p class="site-credits">
 			<?php printf(

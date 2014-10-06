@@ -75,7 +75,7 @@ function ivory_tower_theme_setup() {
 	
 	/* Setup action hooks. */
 	add_action( 'init', 'ivory_tower_register_image_sizes', 5 );
-	add_action( 'init', 'ivory_tower_register_menu', 5 );
+	add_action( 'init', 'ivory_tower_register_menus', 5 );
 	add_action( 'widgets_init', 'ivory_tower_register_sidebar', 5 );
 	add_action( 'wp_head', 'ivory_tower_head_meta_IE', 0 );
 	add_action( 'wp_enqueue_scripts', 'ivory_tower_enqueue_scripts' );
@@ -98,13 +98,14 @@ function ivory_tower_register_image_sizes() {
 }
 
 /**
- * Registers the navigation menu for the theme.
+ * Registers the navigation menus for the theme.
  * 
  * @since  0.1.0
  * @return void.
  */
-function ivory_tower_register_menu() {
+function ivory_tower_register_menus() {
 	register_nav_menu( 'primary', _x( 'Primary', 'nav menu location', 'ivory-tower' ) );
+	register_nav_menu( 'social', _x( 'Social', 'nav menu location', 'ivory-tower' ) );
 }
 
 /**

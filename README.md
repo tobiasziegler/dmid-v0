@@ -6,6 +6,10 @@ Or it will be. This theme is a work in progress, with all features subject to ch
 
 ## Changelog
 
+### 0.3.0
+
+* Added a menu for links to social media accounts that appears as a primary sidebar widget.
+
 ### 0.2.0
 
 * Created custom templates for all the WordPress post formats, along with templates to display attachments, including images.
