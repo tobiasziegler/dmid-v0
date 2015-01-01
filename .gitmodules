@@ -1,4 +1,4 @@
 [submodule "hybrid-core"]
 	path = hybrid-core
 	url = https://github.com/justintadlock/hybrid-core.git
-	branch = 2.0
+	branch = master
