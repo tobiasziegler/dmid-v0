@@ -9,7 +9,7 @@ Or it will be. This theme is a work in progress, with all features subject to ch
 ### 0.3.0
 
 * Added a menu for links to social media accounts that appears as a primary sidebar widget.
-* Updated the Hybrid Core framework to stable version 2.0.2.
+* Updated the Hybrid Core framework to stable version 2.0.4.
 * Updated third-party libraries and assets - Modernizr to 2.8.3 and Genericons to 3.2.
 
 ### 0.2.0
