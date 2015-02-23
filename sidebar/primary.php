@@ -2,11 +2,11 @@
 /**
  * Ivory Tower's primary sidebar template.
  *
- * This is the template for the primary sidebar. It will be displayed if 
+ * This is the template for the primary sidebar. It will be displayed if
  * widgets have been allocated to the primary sidebar.
  *
  * @since 0.1.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */

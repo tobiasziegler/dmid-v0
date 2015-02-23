@@ -2,12 +2,12 @@
 /**
  * Ivory Tower's header template file.
  *
- * Loaded at the top of each of the main templates. This template file provides 
- * the markup for the document HEAD and the opening BODY content. Includes 
+ * Loaded at the top of each of the main templates. This template file provides
+ * the markup for the document HEAD and the opening BODY content. Includes
  * content derived from the HTML5 Boilerplate project.
  *
  * @since 0.1.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */

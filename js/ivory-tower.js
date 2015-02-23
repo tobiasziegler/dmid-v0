@@ -1,5 +1,5 @@
 /** 
- * Custom JavaScript for the Ivory Tower theme. * 
+ * Custom JavaScript for the Ivory Tower theme. *
  */
 
 jQuery( document ).ready(function( $ ){

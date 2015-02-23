@@ -9,7 +9,7 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @since 0.1.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */

@@ -6,7 +6,7 @@
  * form.
  *
  * @since 0.1.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */
@@ -32,6 +32,6 @@ if ( post_password_required() ) {
 			</nav>
 		<?php endif; // // End check for paged comments. ?>
 	<?php endif; // End the check for comments. ?>
-	
+
 	<?php comment_form(); // Load the comment form. ?>
 </section>
