@@ -1,13 +1,16 @@
-# Ivory Tower
+# David Mallard Version 0
 
-Ivory Tower is a clean, modern WordPress theme designed for academics and professionals who like to internet.
+This is the WordPress theme I began developing when I set up my personal website at https://davidmallard.id.au
 
-Or it will be. This theme is a work in progress, with all features subject to change until version 1.0 is released.
+It did enough to provide the basic display while the site was largely unused, and while I wasn't in a position to complete work on a well-designed theme.
+
+Given the advances in WordPress features, web standards and development tools since between implementing the makeshift theme and commencing a full design process, I'm designating this theme as Version 0 for my site and this repository won't undergo any further development.
 
 ## Changelog
 
 ### 0.3.0
 
+* Renamed the theme and updated the documentation to indicate that its use and development has been discontinued.
 * Added a menu for links to social media accounts that appears as a primary sidebar widget.
 * Updated the Hybrid Core framework to stable version 2.0.4.
 * Updated third-party libraries and assets - Normalize.css to 3.0.2, Modernizr to 2.8.3 and Genericons to 3.2.
