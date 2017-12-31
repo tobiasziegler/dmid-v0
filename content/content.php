@@ -8,16 +8,16 @@
  * standard posts since there are templates for all other post formats.
  *
  * @since 0.1.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */
 ?>
 
 <header class="entry-header">
-	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post, the title doesn't need a hyperlink. ?>		
+	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post, the title doesn't need a hyperlink. ?>
 		<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php the_title(); ?></h1>
-	<?php else : // If not viewing a single post, include the hyperlink. ?>		
+	<?php else : // If not viewing a single post, include the hyperlink. ?>
 		<h1 <?php hybrid_attr( 'entry-title' ); ?>><a href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a></h1>
 	<?php endif; // End the single post check. ?>
 	<address <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></address>
@@ -34,7 +34,7 @@
 	<div <?php hybrid_attr( 'entry-summary' ); ?>>
 		<?php the_excerpt(); ?>
 	</div>
-	
+
 	<?php endif; // End the manual excerpt check on a singular post. ?>
 
 	<div <?php hybrid_attr( 'entry-content' ); ?>>

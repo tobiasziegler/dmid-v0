@@ -6,16 +6,16 @@
  * specific template exists to override it.
  *
  * @since 0.2.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */
 ?>
 
 <header class="entry-header">
-	<?php if ( is_attachment() ) : // If viewing a single attachment, the title doesn't need a hyperlink. ?>		
+	<?php if ( is_attachment() ) : // If viewing a single attachment, the title doesn't need a hyperlink. ?>
 		<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php the_title(); ?></h1>
-	<?php else : // If not viewing a single attachment, include the hyperlink. ?>		
+	<?php else : // If not viewing a single attachment, include the hyperlink. ?>
 		<h1 <?php hybrid_attr( 'entry-title' ); ?>><a href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a></h1>
 	<?php endif; // End the single attachment check. ?>
 	<?php edit_post_link(); ?>

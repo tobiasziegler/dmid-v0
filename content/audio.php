@@ -5,16 +5,16 @@
  * This is the content template for the audio post format.
  *
  * @since 0.2.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */
 ?>
 
 <header class="entry-header">
-	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post, the title doesn't need a hyperlink. ?>		
+	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post, the title doesn't need a hyperlink. ?>
 		<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php the_title(); ?></h1>
-	<?php else : // If not viewing a single post, include the hyperlink. ?>		
+	<?php else : // If not viewing a single post, include the hyperlink. ?>
 		<h1 <?php hybrid_attr( 'entry-title' ); ?>><a href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a></h1>
 	<?php endif; // End the single post check. ?>
 	<address <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></address>
@@ -29,17 +29,17 @@
 <div <?php hybrid_attr( 'entry-summary' ); ?>>
 
 	<?php echo( $audio = hybrid_media_grabber( array( 'type' => 'audio', 'split_media' => true ) ) ); ?>
-	
+
 	<?php if ( ( has_excerpt() )	// If the post has a manual excerpt
 			|| ( empty( $audio ) )	// or (edge case) there is no audio
 			) :						// display the excerpt. ?>
 
 	<?php the_excerpt(); ?>
-	
+
 	<?php endif; // End the check for whether to display the excerpt. ?>
 
 </div>
-	
+
 <?php else : // If viewing a single post, display the content. ?>
 
 <div <?php hybrid_attr( 'entry-content' ); ?>>

@@ -2,13 +2,13 @@
 /**
  * Ivory Tower's archive template file.
  *
- * This is used to display archive-type pages if nothing more specific matches 
- * a query. For example, it puts together date-based pages if no date.php file 
- * exists. If you'd like to further customize these archive views, you may 
+ * This is used to display archive-type pages if nothing more specific matches
+ * a query. For example, it puts together date-based pages if no date.php file
+ * exists. If you'd like to further customize these archive views, you may
  * create a new template file for each specific one.
- * 
+ *
  * @since 0.1.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */

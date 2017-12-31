@@ -18,11 +18,11 @@
 	@for $i from 1 through $max {
 		$value: strip-unit(nth($values, $i));
 		$pxValues: #{$pxValues + $value*16}px;
-		
+
 		@if $i < $max {
 			$pxValues: #{$pxValues + " "};
 		}
-	} 
+	}
 
 	@for $i from 1 through $max {
 		$value: strip-unit(nth($values, $i));
@@ -31,8 +31,8 @@
 		@if $i < $max {
 			$remValues: #{$remValues + " "};
 		}
-	} 
-  
+	}
+
 	#{$property}: $pxValues; // IE8 fallback
-	#{$property}: $remValues; 
+	#{$property}: $remValues;
 }

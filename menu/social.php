@@ -2,11 +2,11 @@
 /**
  * Ivory Tower's social menu template.
  *
- * This is the template for the social media menu. It will be displayed if 
+ * This is the template for the social media menu. It will be displayed if
  * items have been allocated to the social menu.
  *
  * @since 0.3.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */

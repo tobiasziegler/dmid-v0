@@ -3,9 +3,9 @@
  * Ivory Tower's user template file.
  *
  * This is used to display user/author archive pages.
- * 
+ *
  * @since 0.1.0
- * 
+ *
  * @package Ivory_Tower
  * @subpackage Templates
  */
